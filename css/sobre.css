@@ -1,4 +1,45 @@
-.teste {
-  height: 900px;
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: tomato;
+}
+
+.caixa {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 1fr 0.5fr;
+  grid-template-rows: 30vh 60vh 10vh;
+  grid-row-gap: 20px;
+}
+
+h1 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 50px;
+  font-family: "Nerko One", cursive;
+  padding-top: 140px;
+  grid-column: 1 / 5;
+}
+h1::after {
+  content: "";
+  display: block;
+  border: 2px solid black;
+  width: 200px;
+  margin: 0 auto;
+}
+
+main {
+  padding: 10px;
   background: tomato;
+  grid-column: 2 / 3;
+}
+
+aside {
+  grid-column: 3 / 4;
+}
+
+footer {
+  margin-top: 20px;
+  grid-column: 1 / 5;
+  grid-row: 4/5;
 }
